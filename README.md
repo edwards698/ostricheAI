@@ -20,8 +20,8 @@ You can set up your Raspberry Pi as an interactive computer with a desktop, or a
 ## Power supply
 The following table shows the USB-PD power mode required to power various Raspberry Pi models. You can use any high-quality power supply that provides the correct power mode.
 
-| Model    | Power supply (voltage/current)   | Raspberry Pi power supply|
-|----------|----------|----------|
-| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 |
-| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 |
-| Row 3, Col 1 | Row 3, Col 2 | Row 3, Col 3 |
+| Model          | Power supply (voltage/current)                | Raspberry Pi power supply|
+|----------------|-----------------------------------------------|--------------------------|
+| Raspberry Pi 5 | 5V/5A, 5V/3A limits peripherals to 600mA      | 27W USB-C power supply   |
+
+ 
