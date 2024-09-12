@@ -28,3 +28,20 @@ The following table shows the USB-PD power mode required to power various Raspbe
 
  ### Section 1: Running OpenAI GPT Models
  Since GPT models like `gpt-3.5-turbo` or `gpt-4` are resource-intensive, it’s best to use OpenAI’s API to offload the heavy computation to their servers.
+
+ # Step 1: Install Python and Dependencies
+First, ensure your environment is set up, and install the required dependencies:
+
+```shell
+sudo apt update
+```
+This will updates the list of available packages and their versions stored in the system's package index.
+```shell
+sudo apt install python3-pip
+```
+After Installation is succesful, run the the following command below:
+```shell
+python --version
+
+```
+you should see `python 3.12.6` If this is not possible, you can also use a Python installer from [www.python.org](https://www.python.org/)  to install python3 or other versions 
