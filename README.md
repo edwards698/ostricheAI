@@ -19,3 +19,4 @@ You can set up your Raspberry Pi as an interactive computer with a desktop, or a
 
 ## Power supply
 The following table shows the USB-PD power mode required to power various Raspberry Pi models. You can use any high-quality power supply that provides the correct power mode.
+
