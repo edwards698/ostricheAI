@@ -51,3 +51,35 @@ After that run the command below:
 pip3 install openai
 ```
 The OpenAI Python library provides convenient access to the OpenAI REST API from any Python 3.7+ application. The library includes type definitions for all request params and response fields, and offers both synchronous and asynchronous clients powered by `httpx`.
+
+### Step 2: Get Your OpenAI API Key
+1. Go to the OpenAI [website](https://platform.openai.com/api-keys)and sign up for an account.
+2. Generate an API key from your OpenAI account dashboard.
+
+### Step 3: Write Python Script to Test OpenAI API
+Create a Python file (e.g., `run_openai_gpt.py`) and use the following code to interact with the API:
+```py
+'''
+Author: Edward Phiri Jr.
+Date: 12/09/2024
+'''
+import openai
+
+# Set your API key here
+openai.api_key = 'your-api-key-here'
+
+def get_gpt_response(prompt):
+    response = openai.Completion.create(
+        model="gpt-3.5-turbo",  # You can also use gpt-4
+        prompt=prompt,
+        max_tokens=100,
+        temperature=0.7
+    )
+    return response.choices[0].text.strip()
+
+if __name__ == "__main__":
+    prompt = "What is the capital of France?"
+    response = get_gpt_response(prompt)
+    print(f"Response: {response}")
+
+```
