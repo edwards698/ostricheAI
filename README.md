@@ -22,9 +22,9 @@ The following table shows the USB-PD power mode required to power various Raspbe
 
 | Model          | Power supply (voltage/current)                | Raspberry Pi power supply|
 |----------------|-----------------------------------------------|--------------------------|
-| 'Raspberry Pi 5' | '5V/5A, 5V/3A limits peripherals to 600mA'      | '27W USB-C power supply'   |
+| `Raspberry Pi 5` | `5V/5A, 5V/3A limits peripherals to 600mA`      | `27W USB-C power supply`   |
 
  Getting started with your Raspberry Pi and setting up the Raspberry pi  [follow this instruction here](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 
  ### Section 1: Running OpenAI GPT Models
- Since GPT models like 'gpt-3.5-turbo' or 'gpt-4' are resource-intensive, it’s best to use OpenAI’s API to offload the heavy computation to their servers.
+ Since GPT models like `gpt-3.5-turbo` or `gpt-4` are resource-intensive, it’s best to use OpenAI’s API to offload the heavy computation to their servers.
