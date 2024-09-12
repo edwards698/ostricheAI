@@ -96,7 +96,7 @@ The response should be displayed in your terminal. You can customize the prompt 
 You can clone the following command into your terminal and download the files by simply runing:
 
 ```shell
-git clone https://github.com/edwards698/your-repository-ostricheAI.git
+git clone https://github.com/edwards698/ostricheAI.git
 
 ```
 That's it! Now you modify and run the program and access its contents.
