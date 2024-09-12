@@ -9,3 +9,12 @@ To get started with your Raspberry Pi, you’ll need the following:
 
 * a power supply
 * boot media (e.g. a microSD card with ample storage and speed) atleast 32GB and above.
+
+You can set up your Raspberry Pi as an interactive computer with a desktop, or as a headless computer accessible only over the network. To set your Raspberry Pi up headless, you don’t need any additional peripherals: you can preconfigure a hostname, user account, network connection, and SSH when you install an operating system. If you want to use your Raspberry Pi directly, you’ll need the following additional accessories:
+
+* display
+* cable to connect your Raspberry Pi to your display
+* keyboard
+* mouse
+
+## Power supply
