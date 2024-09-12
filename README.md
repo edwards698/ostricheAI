@@ -26,10 +26,10 @@ The following table shows the USB-PD power mode required to power various Raspbe
 
  Getting started with your Raspberry Pi and setting up the Raspberry pi  [follow this instruction here](https://www.raspberrypi.com/documentation/computers/getting-started.html)
 
- ### Section 1: Running OpenAI GPT Models
+ # Section 1: Running OpenAI GPT Models
  Since GPT models like `gpt-3.5-turbo` or `gpt-4` are resource-intensive, it’s best to use OpenAI’s API to offload the heavy computation to their servers.
 
- # Step 1: Install Python and Dependencies
+ ### Step 1: Install Python and Dependencies
 First, ensure your environment is set up, and install the required dependencies:
 
 ```shell
@@ -45,3 +45,9 @@ python --version
 
 ```
 you should see `python 3.12.6` If this is not possible, you can also use a Python installer from [www.python.org](https://www.python.org/)  to install python3 or other versions 
+
+After that run the command below:
+```shell
+pip3 install openai
+```
+The OpenAI Python library provides convenient access to the OpenAI REST API from any Python 3.7+ application. The library includes type definitions for all request params and response fields, and offers both synchronous and asynchronous clients powered by `httpx`.
