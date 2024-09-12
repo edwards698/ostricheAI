@@ -99,4 +99,15 @@ You can clone the following command into your terminal and download the files by
 git clone https://github.com/edwards698/ostricheAI.git
 
 ```
+Now that you have cloned the repository, follow these steps to run the specific file:
+1. Navigate to the project directory:
+```shell
+cd ostricheAI
+```
+2. Locate the file you want to run, in this case, `run_openai_gpt.py`.
+3. Run the file with the following command:
+```shell
+python run_openai_gpt.py
+```
+
 That's it! Now you modify and run the program and access its contents.
