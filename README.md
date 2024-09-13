@@ -1,6 +1,6 @@
 
 ![ostrichAIImage](https://github.com/user-attachments/assets/1ba87e97-e8fc-49b2-9107-29e30c5c929e)
-# ostricheAI
+# OstricheAI
 OpenAI GPT models and Meta's LLaMA models on a Raspberry Pi 5. This guide focuses on efficient ways to interact with these models by leveraging APIs and lightweight model setups.
 
 # Hardware Setup
@@ -104,10 +104,10 @@ Now that you have cloned the repository, follow these steps to run the specific 
 ```shell
 cd ostricheAI
 ```
-2. Locate the file you want to run, in this case, `run.py.py`.
+2. Locate the file you want to run, in this case, `run_ai.py.py`.
 3. Run the file with the following command:
 ```shell
-python run.py
+python run_ai.py
 ```
 
 That's it! Now you modify and run the program and access its contents.
@@ -253,5 +253,6 @@ key = cv2.waitKey(1)
 if key == 27:
 break
 ```
-# Now you can do some test facial recognition
+# Now you can do some test facial recognition on a Raspberry Pi 5
 
+ 
