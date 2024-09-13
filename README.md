@@ -203,6 +203,24 @@ With a single line, we make a simple face comparison and print the result. If th
 result = face_recognition.compare_faces([img_encoding], img_encoding2)
 print("Result: ", result)
 ```
+
+You can clone the following command into your terminal and download the files by simply runing:
+
+```shell
+git clone https://github.com/edwards698/ostricheAI.git
+
+```
+Now that you have cloned the repository, follow these steps to run the specific file:
+1. Navigate to the project directory:
+```shell
+cd ostricheAI
+```
+2. Locate the file you want to run, in this case, `image_comaparison.py`.
+3. Run the file with the following command:   
+```shell
+python image_comaparison.py
+```
+
 # Encode all faces in the dataset
 
 Now we have to encode all the images in our database, so that through the webcam video stream if it finds the match it shows the name otherwise it says “name not found”.
