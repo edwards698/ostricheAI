@@ -266,7 +266,7 @@ Now that you have cloned the repository, follow these steps to run the specific 
 cd ostricheAI
 ```
 2. Locate the file you want to run, in this case, `main_video.py`.
-3. Run the file with the following command:
+3. Run the file with the following command:   
 ```shell
 python main_video.py
 ```
