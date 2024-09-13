@@ -254,5 +254,21 @@ if key == 27:
 break
 ```
 # Now you can do some test facial recognition on a Raspberry Pi 5
+You can clone the following command into your terminal and download the files by simply runing:
+
+```shell
+git clone https://github.com/edwards698/ostricheAI.git
+
+```
+Now that you have cloned the repository, follow these steps to run the specific file:
+1. Navigate to the project directory:
+```shell
+cd ostricheAI
+```
+2. Locate the file you want to run, in this case, `main_video.py`.
+3. Run the file with the following command:
+```shell
+python main_video.py
+```
 
  
