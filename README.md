@@ -157,7 +157,101 @@ Finally, run the LLaMA model on the Raspberry Pi:
 ```
 This will load the model and generate a response to the prompt.
 
-# recognition in real-time with OpenCV
+# Recognition in real-time with OpenCV On a Raspberry pi 5
 With face recognition, we not only identify the person by drawing a box on his face but we also know how to give a precise name. With OpenCV and Python, through a database, we compare the person’s photo and we know how to identify it precisely.
 
 we will use as a basis a code created by `Adam Geitgey` and this is the original [GitHub Project](https://github.com/ageitgey/face_recognition) repository of Github 
+
+1. Installations
+The first library to install is `opencv-python`, as always run the command from the terminal.
+```shell
+pip install opencv-python
+```
+Proceed with `face_recognition`, this too installs with pip.
+```shell
+pip install face_recognition
+```
+2. Face recognition on image
+To make face recognition work, we need to have a dataset of photos also composed of a single image per character and comparison photo. For example, in our example, we have a dataset consisting of 1 photo each of `Edgar_Lungu`,`Revy_Mwanawasa`,`Frederick_Chiluba`,`Kenneth_Kaunda`.
+
+And in the comparison, we will use the photo of `Edgar_Lungu`
+
+```python
+import cv2
+import face_recognition
+```
+## Face encoding first image
+With the usual OpenCV procedure, we extract the image, in this case, Messi1.webp, and convert it into RGB color format. Then we do the “face encoding” with the functions of the Face recognition library.
+
+```python
+img = cv2.imread("Revy_Mwanawasa.png")
+rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+img_encoding = face_recognition.face_encodin
+gs(rgb_img)[0]
+```
+## Face encoding second image
+Same procedure for the second image, we only change the name of the variables and obviously the path of the second image, in this case: images/Messi.webp.
+
+```python
+img2 = cv2.imread("images_data_set/Edgar_Lungu.png")
+rgb_img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
+img_encoding2 = face_recognition.face_encodings(rgb_img2)[0]
+```
+### Comparison of images
+With a single line, we make a simple face comparison and print the result. If the images are the same it will print True otherwise False.
+```python
+result = face_recognition.compare_faces([img_encoding], img_encoding2)
+print("Result: ", result)
+```
+# Encode all faces in the dataset
+
+Now we have to encode all the images in our database, so that through the webcam video stream if it finds the match it shows the name otherwise it says “name not found”.
+
+This is a function of the file I have prepared and it simply takes all the images contained in the `images_data_set/ directory` and encodes them. In our case, there are 5 images.
+
+### Encode faces from a directory
+```python
+sfr = SimpleFacerec()
+sfr.load_encoding_images("images_data_set/")
+```
+# Face recognition in real-time on a webcam
+Even for face recognition in real-time, the procedure is similar to that of a single image but with something more. As a first step remember to `clone`
+```shell
+git clone https://github.com/edwards698/ostricheAI.git
+```
+### OR
+ `download` the files from the link terminal and among the various Python files you will also find `visual.py`, remember that this is not a library so to include it in your project, put this file in the same folder and these are the correct lines of code to start.
+
+```python
+import cv2
+from simple_facerec import SimpleFacerec
+```
+# Take webcam stream
+With a simple Opencv function, We take the webcam stream and loop it
+```python
+# Load Camera
+cap = cv2.VideoCapture(0)# choose the Webcam that you want to use starting from 0
+while True:
+ret, frame = cap.read()
+```
+# Face location and face recognition
+Now we identify the face passing the frame of the webcam to this function detect_known_faces(frame). It will give us the name of the person and an array with the position at each moment of the movement.
+
+```python 
+# Detect Faces
+face_locations, face_names = sfr.detect_known_faces(frame)
+for face_loc, name in zip(face_locations, face_names):
+y1, x2, y2, x1 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
+```
+# Show name and rectangle
+Now that we have all the elements we show them with OpenCV.
+```python
+        cv2.putText(frame, name,(x1, y1 - 10), cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 200), 2)
+cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 200), 4)
+cv2.imshow("Frame", frame)
+key = cv2.waitKey(1)
+if key == 27:
+break
+```
+# Now you can do some test facial recognition
+
