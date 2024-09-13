@@ -88,7 +88,7 @@ Replace `your-api-key-here` with your actual API key.
 ### Step 4: Run the Script
 Run the Python script to make an API call to OpenAI’s servers:
 ```shell
-python3 run_openai_gpt.py
+python3 run.py
 ```
 
 The response should be displayed in your terminal. You can customize the prompt to test different queries.
@@ -104,10 +104,10 @@ Now that you have cloned the repository, follow these steps to run the specific 
 ```shell
 cd ostricheAI
 ```
-2. Locate the file you want to run, in this case, `run_openai_gpt.py`.
+2. Locate the file you want to run, in this case, `run.py.py`.
 3. Run the file with the following command:
 ```shell
-python run_openai_gpt.py
+python run.py
 ```
 
 That's it! Now you modify and run the program and access its contents.
@@ -156,3 +156,8 @@ Finally, run the LLaMA model on the Raspberry Pi:
 ./main -m models/quantized_llama.bin -p "Tell me a joke."
 ```
 This will load the model and generate a response to the prompt.
+
+# recognition in real-time with OpenCV
+With face recognition, we not only identify the person by drawing a box on his face but we also know how to give a precise name. With OpenCV and Python, through a database, we compare the person’s photo and we know how to identify it precisely.
+
+we will use as a basis a code created by `Adam Geitgey` and this is the original [GitHub Project](https://github.com/ageitgey/face_recognition) repository of Github 
