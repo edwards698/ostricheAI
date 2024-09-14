@@ -6,15 +6,15 @@ sfr = SimpleFacerec()
 sfr.load_encoding_images("images_data_set/")
 
 # Load Camera
-cap = cv2.VideoCapture(0)  # Choose the Webcam that you want to use starting from 0
+webcam = cv2.Videowebcamture(0)  # Choose the Webcam that you want to use starting from 0
 
 # Check if camera is opened successfully
-if not cap.isOpened():
+if not webcam.isOpened():
     print("Error: Could not open webcam.")
     exit()
 
 while True:
-    ret, frame = cap.read()
+    ret, frame = webcam.read()
     if not ret:
         print("Failed to grab frame")
         break
@@ -37,5 +37,5 @@ while True:
         break
     
 # Release the camera and close windows
-cap.release()
+webcam.release()
 cv2.destroyAllWindows()
