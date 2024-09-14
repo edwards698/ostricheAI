@@ -238,7 +238,7 @@ Even for face recognition in real-time, the procedure is similar to that of a si
 git clone https://github.com/edwards698/ostricheAI.git
 ```
 ### OR
- `download` the files from the link terminal and among the various Python files you will also find `visual.py`, remember that this is not a library so to include it in your project, put this file in the same folder and these are the correct lines of code to start.
+ `download` the files from the link terminal and among the various Python files you will also find `main_video.py`, remember that this is not a library so to include it in your project, put this file in the same folder and these are the correct lines of code to start.
 
 ```python
 import cv2
