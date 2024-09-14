@@ -14,14 +14,14 @@ class SimpleFacerec:
 
     def load_encoding_images(self, images_path):
         """
-        Load encoding images from path
+        Scaning images from path
         :param images_path:
         :return:
         """
         # Load Images
         images_path = glob.glob(os.path.join(images_path, "*.*"))
 
-        print("{} encoding images found.".format(len(images_path)))
+        print("{} Scaning images found.".format(len(images_path)))
 
         # Store image encoding and names
         for img_path in images_path:
@@ -37,7 +37,7 @@ class SimpleFacerec:
             # Store file name and file encoding
             self.known_face_encodings.append(img_encoding)
             self.known_face_names.append(filename)
-        print("Encoding images loaded")
+        print("Scaning images loaded")
 
     def detect_known_faces(self, frame):
         small_frame = cv2.resize(frame, (0, 0), fx=self.frame_resizing, fy=self.frame_resizing)
