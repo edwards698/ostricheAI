@@ -1,11 +1,13 @@
 '''
+
 Author: Edward Phiri Jr.
 Date: 12/09/2024
+
 '''
 import openai
 #import os
 # Set your API key here
-openai.api_key = 'your-api-key-here'
+openai.api_key = ''
 
 def get_gpt_response(prompt):
     response = openai.Completion.create(
