@@ -3,7 +3,7 @@
 # OstricheAI
 OpenAI GPT models and Meta's LLaMA models on a Raspberry Pi 5. This guide focuses on efficient ways to interact with these models by leveraging APIs and lightweight model setups.
 
- [https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://www.youtube.com/watch?v=dQw4w9WgXcQ), the video ID is dQw4w9WgXcQ.
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 # Hardware Setup
 Before starting, make sure your Raspberry Pi 5 is set up with the following:
 To get started with your Raspberry Pi, you’ll need the following:
